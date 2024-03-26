@@ -1,0 +1,57 @@
+<div>
+    <div class="containerForm">
+        <h3 class="titleTipoTrabajo">Crear una nueva liquidación:</h3>
+        <form class="p-5 form">
+            <div class="form-check p-3" (click)="onSubmitCompleto()">
+                <input class="form-check-input" type="radio" name="tipoTrabajo" id="tiempoCompleto">
+                <label class="form-check-label" for="tiempoCompleto">
+                    Tiempo Completo
+                </label>
+            </div>
+            <div class="form-check p-3" (click)="onSubmitDias()">
+                <input class="form-check-input" type="radio" name="tipoTrabajo" id="porDias">
+                <label class="form-check-label" for="porDias">
+                    Por Días
+                </label>
+            </div>
+            <div class="form-check p-3" (click)="onSubmitHoras()">
+                <input class="form-check-input" type="radio" name="tipoTrabajo" id="porHoras">
+                <label class="form-check-label" for="porHoras">
+                    Por Horas
+                </label>
+            </div>
+
+            <div *ngIf="isTiempoCompleto">
+                <div class="mt-4">
+                    <input class="btn_mainColor shadow w-100" type="button" value="Siguiente"
+                        [routerLink]="['/calculadora/tiempo-completo']">
+                </div>
+            </div>
+            <div *ngIf="isSalarioDias">
+                <div class="mt-4">
+                    <input class="btn_mainColor shadow w-100" type="button" value="Siguiente"
+                        [routerLink]="['/calculadora/salario-dias']">
+                </div>
+            </div>
+            <div *ngIf="isSalarioHoras">
+                <div class="mt-4">
+                    <input class="btn_mainColor shadow w-100" type="button" value="Siguiente"
+                        [routerLink]="['/calculadora/salario-horas']">
+                </div>
+            </div>
+            <div *ngIf="isDisable">
+                <div class="mt-4">
+                    <input class="btn btn-light shadow w-100" type="button" value="Siguiente" disabled>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <hr>
+    <div>
+        <div class="containerForm">
+            <input class="btn_mainColor shadow w-100" type="button" value="Ver Mis Liquidaciones"
+                [routerLink]="['/calculadora/mis-liquidaciones']">
+        </div>
+    </div>
+</div>

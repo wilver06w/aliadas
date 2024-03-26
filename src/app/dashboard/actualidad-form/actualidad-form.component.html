@@ -1,0 +1,37 @@
+<div class="p-3">
+    <h1>Creación de Noticias</h1>
+    <div>
+
+
+        <form [formGroup]="createForm">
+            <div class="row align-items-end p-2">
+                <div class="col-12 col-md-6"><input class="form-control" type="text" formControlName="imagen"
+                        id="imagen" placeholder="URL imagen"></div>
+
+                <div class="col-12 col-md-6">
+                    <small class="d-block text-secondary">Fecha</small>
+                    <input class="form-control text-secondary" type="date" formControlName="fecha">
+                </div>
+            </div>
+            <div class="p-2">
+                <input class="form-control" type="text" placeholder="Título de Noticia" formControlName="titulo">
+            </div>
+            <div class="p-2">
+                <editor [init]="{ plugins: 'lists link image table code help wordcount' }" formControlName="contenido">
+                </editor>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="p-1 col-12 col-md-4">
+                    <button (click)="onSubmit()" class="btn btn-light shadow w-100"><span
+                            class="bi bi-check-square-fill text-success"></span> Guardar Noticia</button>
+                </div>
+                <div class="p-1 col-12 col-md-4">
+                    <button [routerLink]="['/dashboard/actualidadlist']" class="btn btn-light shadow w-100"><span
+                            class="bi bi-arrow-90deg-left text-danger"></span>
+                        Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

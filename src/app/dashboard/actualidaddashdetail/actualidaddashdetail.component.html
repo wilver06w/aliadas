@@ -1,0 +1,30 @@
+<div class="p-5">
+    <div>
+        <div class="row">
+            <div class="col-12 pb-5">
+                <div class="col-12 text-center">
+                    <img class="w-50 text-decoration-none" [src]="miNoticia?.imagen" alt="{{miNoticia?.titulo}}">
+                </div>
+                <h2 class="text-decoration-none">{{miNoticia?.titulo}}</h2>
+                <p class="text-decoration-none" [innerHTML]="miNoticia?.contenido"></p>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-12 col-md-4">
+            <button class="w-100 btn btn-light shadow"
+                [routerLink]="['/dashboard/actualidadedit/' + miNoticia?.id]"><span
+                    class="bi bi-pencil-square text-warning"></span>
+                Editar</button>
+        </div>
+        <div class="col-12 col-md-4">
+            <button class="w-100 btn btn-light shadow" (click)="deleteNoticia(miNoticia.id)"><span
+                    class="bi bi-x-circle-fill text-danger"></span> Eliminar</button>
+        </div>
+        <div class="col-12 col-md-4">
+            <button class="w-100 btn btn-light shadow" [routerLink]="['/dashboard/actualidadlist']"><span
+                    class="bi bi-arrow-90deg-left text-dark"></span>
+                Regresar</button>
+        </div>
+    </div>
+</div>

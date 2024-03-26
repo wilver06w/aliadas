@@ -1,0 +1,7 @@
+{
+  "name": "aliadas-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}

@@ -1,0 +1,304 @@
+<div class="p-3">
+
+    <div>
+        <h1>Beneficios Laborales</h1>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/g8aPIUgA-aA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="accordion-body my-4" [innerHTML]="formatTextAsHtml(beneficios?.descripcion)">
+        </div>
+        <div class="accordion accordionZindex" id="accordionExample">
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_1 !== ''">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-light text-dark p-4 bg-light text-dark p-4" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        {{beneficios?.titulo_1}}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_1)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_2 !== ''">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        {{beneficios?.titulo_2}}
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_2)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_3 !== ''">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        {{beneficios?.titulo_3}}
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_3)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_4 !== ''">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        {{beneficios?.titulo_4}}
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_4)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_5 !== ''">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        {{beneficios?.titulo_5}}
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_5)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_6 !== ''">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                        {{beneficios?.titulo_6}}
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_6)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_7 !== ''">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                        {{beneficios?.titulo_7}}
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_7)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_8 !== ''">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                        {{beneficios?.titulo_8}}
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_8)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_9 !== ''">
+                <h2 class=" accordion-header" id="headingNine">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                        {{beneficios?.titulo_9}}
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_9)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_10 !== ''">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                        {{beneficios?.titulo_10}}
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_10)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_11 !== ''">
+                <h2 class="accordion-header" id="headingEleven">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                        {{beneficios?.titulo_11}}
+                    </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_11)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_12 !== ''">
+                <h2 class="accordion-header" id="headingtwelve">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsetwelve" aria-expanded="true" aria-controls="collapsetwelve">
+                        {{beneficios?.titulo_12}}
+                    </button>
+                </h2>
+                <div id="collapsetwelve" class="accordion-collapse collapse" aria-labelledby="headingtwelve"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_12)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_13 !== ''">
+                <h2 class="accordion-header" id="headingThirteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
+                        {{beneficios?.titulo_13}}
+                    </button>
+                </h2>
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_13)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_14 !== ''">
+                <h2 class="accordion-header" id="headingFourteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
+                        {{beneficios?.titulo_14}}
+                    </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_14)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_15 !== ''">
+                <h2 class="accordion-header" id="headingFifteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen">
+                        {{beneficios?.titulo_15}}
+                    </button>
+                </h2>
+                <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_15)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_16 !== ''">
+                <h2 class="accordion-header" id="headingSixteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen">
+                        {{beneficios?.titulo_16}}
+                    </button>
+                </h2>
+                <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_16)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_17 !== ''">
+                <h2 class="accordion-header" id="headingSeventy">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeventy" aria-expanded="true" aria-controls="collapseSeventy">
+                        {{beneficios?.titulo_17}}
+                    </button>
+                </h2>
+                <div id="collapseSeventy" class="accordion-collapse collapse" aria-labelledby="headingSeventy"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_17)">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_18 !== ''">
+                <h2 class="accordion-header" id="headingEighteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen">
+                        {{beneficios?.titulo_18}}
+                    </button>
+                </h2>
+                <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_18)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_19 !== ''">
+                <h2 class="accordion-header" id="headingNineteen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen">
+                        {{beneficios?.titulo_19}}
+                    </button>
+                </h2>
+                <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_19)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="beneficios?.titulo_20 !== ''">
+                <h2 class="accordion-header" id="headingTwenty">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwenty" aria-expanded="true" aria-controls="collapseTwenty">
+                        {{beneficios?.titulo_20}}
+                    </button>
+                </h2>
+                <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(beneficios?.texto_20)">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>

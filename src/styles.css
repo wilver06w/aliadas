@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-purple: #4e0077;
+    --secondary-orange: #ea7a15;
+    --primary-text-color: rgb(131, 131, 131);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.btn_mainColor {
+    background-color: var(--primary-purple);
+    color: white;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}

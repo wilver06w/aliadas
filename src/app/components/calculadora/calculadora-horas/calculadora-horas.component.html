@@ -1,0 +1,87 @@
+<div *ngIf="showDivForm">
+    <div class="containerForm">
+        <h3 class="titleTipoTrabajo">Trabajo por Horas</h3>
+        <h4 class="titleIngresarDatos">Ingresa los siguientes datos:</h4>
+        <form class="p-5 form" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <div class="py-2">
+                <small>Fecha Inicial</small>
+                <input class="form-control" type="date" formControlName="fecha_inicio">
+                <p class="text-danger small px-2" *ngIf="checkControl('fecha_inicio', 'required')">Falta Fecha Inicio
+                </p>
+            </div>
+            <div class="py-2">
+                <small>Fecha Final</small>
+                <input class="form-control" type="date" formControlName="fecha_fin">
+                <p class="text-danger small px-2" *ngIf="checkControl('fecha_fin', 'required')">Falta Fecha Inicio
+                </p>
+            </div>
+            <div class="py-2">
+                <small>Auxilio de Transporte (año a liquidar)</small>
+                <select class="form-select" formControlName="auxilio_transporte__horas">
+                    <option value="162000">2024</option>
+                    <option value="140606">2023</option>
+                    <option value="117172">2022</option>
+                    <option value="106454">2021</option>
+                    <option value="102854">2020</option>
+                    <option value="97032">2019</option>
+                    <option value="88211">2018</option>
+                    <option value="83140">2017</option>
+                    <option value="77700">2016</option>
+                    <option value="74000">2015</option>
+                    <option value="72000">2014</option>
+                    <option value="70500">2013</option>
+                    <option value="67800">2012</option>
+                    <option value="63600">2011</option>
+                    <option value="61500">2010</option>
+                    <p class="text-danger small px-2" *ngIf="checkControl('auxilio_transporte__horas', 'required')">
+                        Falta
+                        Auxilio de Transporte
+                    </p>
+                </select>
+            </div>
+            <div class="py-2">
+                <small>Salario por Hora</small>
+                <input class="form-control" type="number" formControlName="salario_hora__horas">
+                <p class="text-danger small px-2" *ngIf="checkControl('salario_hora__horas', 'required')">Falta
+                    Salario Pactado Diario
+                </p>
+            </div>
+
+            <div class="py-2">
+                <small>¿Cuántas horas trabajas al día?</small>
+                <input class="form-control" type="number" formControlName="horasTrabajoDia__horas">
+                <p class="text-danger small px-2" *ngIf="checkControl('horasTrabajoDia__horas', 'required')">Falta
+                    horas trabajadas al día
+                </p>
+            </div>
+
+            <div class="py-2">
+                <small>Días trabajados durante el mes</small>
+                <input class="form-control" type="number" formControlName="diasTrabajoMes__horas">
+                <p class="text-danger small px-2" *ngIf="checkControl('diasTrabajoMes__horas', 'required')">Falta
+                    Dias de trabajo en el mes
+                </p>
+            </div>
+
+            <div class="py-2">
+                <small>Otros pagos recibidos</small>
+                <input class="form-control" type="number" formControlName="otros_pagos">
+            </div>
+
+            <div>
+                <div class="mt-4">
+                    <input [disabled]="!createForm.valid" class="btn btn-success shadow w-100" type="submit"
+                        value="Calcular">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<app-resultados-calculadora-horas *ngIf="showDivResults" [fecha_inicio]="fecha_inicio" [fecha_fin]="fecha_fin"
+    [horasAlMesConcreto__horas]="horasAlMesConcreto__horas" [salario_hora__horas]="salario_hora__horas"
+    [promedioTransporteMensual__horas]="promedioTransporteMensual__horas"
+    [promedioSalarioMensual__horas]="promedioSalarioMensual__horas" [otros_pagos]="otros_pagos"
+    [baseLiquidacion__horas]="baseLiquidacion__horas" [cesantias__horas]="cesantias__horas"
+    [interesesCesantias__horas]="interesesCesantias__horas" [vacaciones__horas]="vacaciones__horas"
+    [prima__horas]="prima__horas" [id]="id" [seguridadSocial__horas]="seguridadSocial__horas">
+</app-resultados-calculadora-horas>

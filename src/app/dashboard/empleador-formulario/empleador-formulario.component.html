@@ -1,0 +1,166 @@
+<div class="p-3">
+
+    <h1>Libertad Sindical</h1>
+
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="p-2">
+            <h2>Generalidades</h2>
+            <editor [init]="{ plugins: 'lists link image table code help wordcount' }" formControlName="generalidades">
+            </editor>
+        </div>
+        <h2 class="">Preguntas y Respuestas</h2>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 1</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" placeholder="Pregunta 1" name="pregunta1"
+                        formControlName="pregunta1">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta1"></editor>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 2</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" placeholder="Pregunta 2" name="pregunta2"
+                        formControlName="pregunta2">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta2"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 3</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" placeholder="Pregunta 3" name="pregunta3"
+                        formControlName="pregunta3">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta3"></editor>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 4</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" placeholder="Pregunta 4" name="pregunta4"
+                        formControlName="pregunta4">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta4"></editor>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 5</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" name="pregunta5" placeholder="Pregunta 5"
+                        formControlName="pregunta5">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta5"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 6</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" name="pregunta6" placeholder="Pregunta 6"
+                        formControlName="pregunta6">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta6"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 7</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" name="pregunta7" placeholder="Pregunta 7"
+                        formControlName="pregunta7">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta7"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 8</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" name="pregunta8" placeholder="Pregunta 8"
+                        formControlName="pregunta8">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta8"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 9</h3>
+                <div class="py-2">
+                    <input class="form-control" type="text" name="pregunta9" placeholder="Pregunta 9"
+                        formControlName="pregunta9">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta9"></editor>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="p-2 p-md-5">
+            <div class="row p-3 p-md-4 border rounded bg-light">
+                <h3 class="fs-5 text-center">Opción 10</h3>
+                <div class="py-2">
+                    <input class="form-control" name="pregunta10" type="text" placeholder="Pregunta 10"
+                        formControlName="pregunta10">
+                </div>
+                <div class="py-2">
+                    <editor [init]="{ plugins: 'lists link image table code help wordcount' }"
+                        formControlName="respuesta10"></editor>
+                </div>
+            </div>
+            <div class="p-3 text-center">
+                <input type="submit" value="Guardar" class="btn btn-success  w-100 w-md-50">
+            </div>
+        </div>
+    </form>
+
+</div>

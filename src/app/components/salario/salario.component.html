@@ -1,0 +1,154 @@
+<div class="p-3">
+
+    <div>
+        <h1>Salario</h1>
+        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/uGjC8wT3yHw" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="accordion-body my-4" [innerHTML]="formatTextAsHtml(salario?.descripcion)">
+        </div>
+        <div class="accordion accordionZindex" id="accordionExample">
+
+            <div class="accordion-item" *ngIf="salario?.titulo_1 !== ''">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button bg-light text-dark p-4 bg-light text-dark p-4" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne">
+                        {{salario?.titulo_1}}
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_1)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_2 !== ''">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        {{salario?.titulo_2}}
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_2)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_3 !== ''">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        {{salario?.titulo_3}}
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_3)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_4 !== ''">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        {{salario?.titulo_4}}
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_4)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_5 !== ''">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        {{salario?.titulo_5}}
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_5)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_6 !== ''">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                        {{salario?.titulo_6}}
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_6)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_7 !== ''">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                        {{salario?.titulo_7}}
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_7)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_8 !== ''">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                        {{salario?.titulo_8}}
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_8)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_9 !== ''">
+                <h2 class=" accordion-header" id="headingNine">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                        {{salario?.titulo_9}}
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_9)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" *ngIf="salario?.titulo_10 !== ''">
+                <h2 class="accordion-header" id="headingTen">
+                    <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                        {{salario?.titulo_10}}
+                    </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body" [innerHTML]="formatTextAsHtml(salario?.texto_10)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

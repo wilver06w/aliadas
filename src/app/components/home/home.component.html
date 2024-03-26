@@ -1,0 +1,60 @@
+<div class="container-fluid containerCss text-center p-md-5">
+        <div>
+                <div class="row pt-4">
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['calculadora']">
+                                        <img class="w-100" src="../../../assets/bt-calculadoras.png"
+                                                alt="Ver Calculadora">
+                                </a>
+                        </div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['misderechos']">
+                                        <img class="w-100" src="../../../assets/bt-derechos.png" alt="Ver Derechos">
+                                </a>
+                        </div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['guiaentidades']">
+                                        <img class="w-100" src="../../../assets/bt-entidades.png"
+                                                alt="Ver Guía de Entidades">
+                                </a></div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['actualidad']">
+                                        <img class="w-100" src="../../../assets/bt-actualidad.png" alt="Ver Actualidad">
+                                </a>
+                        </div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['violenciaacoso']">
+                                        <img class="w-100" src="../../../assets/bt-violencia.png"
+                                                alt="Ver Violencia y Acoso">
+                                </a></div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['libertadsindical']">
+                                        <img class="w-100" src="../../../assets/bt-libertad-sindical.png"
+                                                alt="Ver Libertad Sindical">
+                                </a>
+                        </div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['denuncia']">
+                                        <img class="w-100" src="../../../assets/bt-denuncia.png" alt="Ver Denuncia">
+                                </a>
+                        </div>
+                        <div class="col-6 col-md-3 px-4 py-1 p-md-5"><a [routerLink]="['empleador']">
+                                        <img class="w-100" src="../../../assets/bt-empleador.png" alt="Ver Empleador">
+                                </a>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<!-- Button trigger modal -->
+<div class="mainColor">
+        <button [hidden]="!isButtonVisible" type="button" class="btn mainColor w-100" id="buttonModalOpen"
+                data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Modal
+        </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                        <div class="modal-body">
+                                <app-formulario-inicio></app-formulario-inicio>
+                        </div>
+                </div>
+        </div>
+</div>

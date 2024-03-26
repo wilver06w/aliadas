@@ -1,0 +1,20 @@
+.alto {
+    height: 100vh;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.textSecondary {
+    padding-left: 20px;
+    font-size: 1em;
+    line-height: 2;
+    text-decoration: none;
+    color: grey;
+}
+
+.textSecondary:hover {
+    font-weight: 400;
+    color: white;
+}

@@ -1,0 +1,24 @@
+<div class="p-3">
+    <!-- <div class="text-end">
+        <a [routerLink]="['/dashboard/actualidad']"><i class="bi bi-plus-circle-fill plusIcon"></i></a>
+    </div> -->
+    <div class="row text-center align-items-center mb-5">
+        <div class="fw-bold col-md-1">#</div>
+        <div class="fw-bold col-md-4">Tipo</div>
+        <div class="fw-bold col-md-5">Fecha Acceso</div>
+        <div class="fw-bold col-md-2">
+            <span><i class="bi bi-x-circle-fill text-dark fs-5 px-1"></i></span>
+        </div>
+    </div>
+    <div class="row text-center my-4" *ngFor="let item of customers, let i = index">
+        <div class="col-md-1">{{i + 1}}</div>
+        <div class="col-md-4">{{item.tipo}}</div>
+        <div class="col-md-5">{{item.fecha | date: 'dd/MM/yyyy'}}</div>
+        <div class="col-md-2">
+            <span><i class="bi bi-x-circle-fill text-danger fs-5 px-1 pointer"
+                    (click)="deleteCustomer(item.id)"></i></span>
+        </div>
+        <hr>
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+hr {
+    margin-top: 1.3em;
+    padding: 0;
+
+}
+
+.plusIcon {
+    font-size: 4em;
+    color: var(--primary-purple);
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}

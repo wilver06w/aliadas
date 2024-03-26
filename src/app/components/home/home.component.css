@@ -1,0 +1,8 @@
+.containerCss {
+    background-color: var(--primary-purple);
+}
+
+.mainColor {
+    background-color: var(--primary-purple);
+    color: var(--primary-purple);
+}

@@ -1,0 +1,131 @@
+<div>
+    <div class="containerForm">
+        <h3 class="titleTipoTrabajo">Liquidación Trabajo por Días</h3>
+        <div class="p-5 form text-center">
+            <h4 class="titleIngresarDatos">Información General</h4>
+
+            <div class="row p-2">
+                <div class="col-6">
+                    <div class="resultado_titulo">Fecha Inicial</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.fecha_inicio}}</div>
+                </div>
+                <div class="col-6">
+                    <div class="resultado_titulo">Fecha Final</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.fecha_fin}}</div>
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-6">
+                    <div class="resultado_titulo">Días Liquidación</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.diasTotalesTrabajados__dias}}</div>
+                </div>
+                <div class="col-6">
+                    <div class="resultado_titulo">Salario Promedio</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.promedioSalarioMensual__dias |
+                        currency:'USD':'symbol':'1.0-0'}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-6">
+                    <div class="resultado_titulo">Auxilio de Transporte</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.transporteMensual__dias |
+                        currency:'USD':'symbol':'1.0-0'}}</div>
+                </div>
+                <div class="col-6">
+                    <div class="resultado_titulo">Seguridad Social</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.seguridadSocial__dias |
+                        currency:'USD':'symbol':'1.0-0'}}</div>
+                </div>
+            </div>
+
+            <div class="row p-2">
+                <div class="col-6">
+                    <div class="resultado_titulo">Pensión</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.pension__dias | currency:'USD':'symbol':'1.0-0'}}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="resultado_titulo">Otros Pagos</div>
+                    <div class="resultado_subtitulo">{{miLiquidacion.otros_pagos | currency:'USD':'symbol':'1.0-0'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIQUIDACIÓN TRABAJO COMPLETO (POR MES) -->
+
+        <div class="form p-4 my-3">
+            <h4 class="titleIngresarDatos">Tu Liquidación</h4>
+            <div class="row p-1 text-center">
+                <div class="col-8 text-start resultado_subtitulo">
+                    Cesantías
+                </div>
+                <div class="col-4 text-end resultado_subtitulo">
+                    {{miLiquidacion.cesantias__dias | currency:'USD':'symbol':'1.0-0'}}
+                </div>
+            </div>
+
+            <div class="row p-1 text-center">
+                <div class="col-8 text-start resultado_subtitulo">
+                    Intereses Cesantías
+                </div>
+                <div class="col-4 text-end resultado_subtitulo">
+                    {{miLiquidacion.interesesCesantias__dias | currency:'USD':'symbol':'1.0-0'}}
+                </div>
+            </div>
+
+            <div class="row p-1 text-center">
+                <div class="col-8 text-start resultado_subtitulo">
+                    Vacaciones
+                </div>
+                <div class="col-4 text-end resultado_subtitulo">
+                    {{miLiquidacion.vacaciones__dias | currency:'USD':'symbol':'1.0-0'}}
+                </div>
+            </div>
+
+            <div class="row p-1 text-center resultado_subtitulo">
+                <div class="col-8 text-start">
+                    Prima Segundo Semestre
+                </div>
+                <div class="col-4 text-end resultado_subtitulo">
+                    {{miLiquidacion.prima__dias | currency:'USD':'symbol':'1.0-0'}}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row p-1 my-3 text-center resultado_subtitulo">
+                <div class="col-8 text-start fw-bold">
+                    Total Liquidación
+                </div>
+                <div class="col-4 text-end resultado_subtitulo fw-bold">
+                    {{miLiquidacion.cesantias__dias + miLiquidacion.interesesCesantias__dias +
+                    miLiquidacion.vacaciones__dias + miLiquidacion.prima__dias |
+                    currency:'USD':'symbol':'1.0-0'}}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="p-1">
+                <button class="btn btn-danger" (click)="deleteLiquidacion($event)"><span class="bi bi-x"></span>
+                    Eliminar</button>
+            </div>
+            <div class="p-1">
+                <button class="btn btn-secondary" [routerLink]="['/calculadora']"><span class="bi bi-plus"></span>
+                    Nueva</button>
+            </div>
+            <div class="p-1">
+                <button class="btn btn-primary" [routerLink]="['/calculadora/mis-liquidaciones']"><span
+                        class="bi bi-check-lg"></span>
+                    Ver Todas</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

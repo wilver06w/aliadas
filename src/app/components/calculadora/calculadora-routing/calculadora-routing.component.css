@@ -1,0 +1,13 @@
+.headerCalculadora {
+    background-color: var(--primary-purple);
+    width: 100%;
+}
+
+.headerCalculadora__titles {
+    font-size: 1.3em;
+}
+
+.headerCalculadora__subtitles {
+    font-size: 0.6em;
+    line-height: 0cap;
+}

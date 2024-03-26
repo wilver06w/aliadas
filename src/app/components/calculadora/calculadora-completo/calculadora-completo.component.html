@@ -1,0 +1,82 @@
+<div *ngIf="showDivForm">
+    <div class="containerForm">
+        <h3 class="titleTipoTrabajo">Trabajo por Tiempo Completo</h3>
+        <h4 class="titleIngresarDatos">Ingresa los siguientes datos:</h4>
+        <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="p-5 form">
+            <div class="py-2">
+                <small>Fecha Inicial</small>
+                <input class="form-control" type="date" formControlName="fecha_inicio"
+                    (ngModelChange)="fechaValidacion()">
+                <p class="text-danger small px-2" *ngIf="checkControl('fecha_inicio', 'required')">Falta Fecha Inicio
+                </p>
+
+            </div>
+            <div class="py-2">
+                <small>Fecha Final</small>
+                <input class="form-control" type="date" formControlName="fecha_fin" (ngModelChange)="fechaValidacion()">
+                <p class="text-danger small px-2" *ngIf="showAnoDiferente">No
+                    puedes poner años diferentes
+                </p>
+            </div>
+            <div class="py-3" *ngIf="showButtonPrima">
+                <p>¿Te han pagado la prima de mitad de año?</p>
+                <div class="d-flex gap-3">
+
+                    <div class="form-check">
+                        <div class="py-2 px-3">
+                            <input class="form-check-input" id="isPrimaPonderada" type="radio" value="si"
+                                formControlName="isPrimaPonderada" checked>
+                            <label class="form-check-label">No</label>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <div class="py-2 px-3">
+                            <input class="form-check-input" id="isPrimaPonderada" type="radio" value="no"
+                                formControlName="isPrimaPonderada">
+                            <label class="form-check-label">Si</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="py-2">
+                <small>Auxilio de Transporte (año a liquidar)</small>
+                <input class="form-control" type="number" [value]="auxilio_transporte__completo"
+                    formControlName="auxilio_transporte__completo" id="auxilio_transporte__completo" readonly>
+            </div>
+            <div class="py-2">
+                <small>Salario Mensual</small>
+                <input class="form-control" type="number" formControlName="salario_mensual__completo">
+            </div>
+            <p class="text-danger small px-2" *ngIf="checkControl('salario_mensual__completo', 'required')">Falta
+                Salario Mensual
+            </p>
+
+            <div class="py-2">
+                <small>Otros pagos recibidos</small>
+                <input class="form-control" type="number" formControlName="otros_pagos__completo">
+            </div>
+
+            <div>
+                <div class="mt-4">
+                    <input [disabled]="!createForm.valid" class="btn btn-success shadow w-100" type="submit"
+                        value="Calcular">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<app-resultados-calculadora-completo *ngIf="showDivResults" [fecha_inicio]="fecha_inicio" [fecha_fin]="fecha_fin"
+    [diasTotalesTrabajados__completo]="diasTotalesTrabajados__completo"
+    [salario_mensual__completo]="salario_mensual__completo"
+    [auxilio_transporte__completo]="auxilio_transporte__completo"
+    [seguridadSocial__completo]="seguridadSocial__completo" [otros_pagos__completo]="otros_pagos__completo"
+    [salarioMenosDeducciones__completo]="salarioMenosDeducciones__completo" [cesantias__completo]="cesantias__completo"
+    [interesesCesantias__completo]="interesesCesantias__completo" [prima__completo]="prima__completo"
+    [vacaciones__completo]="vacaciones__completo" [id]="id" [primaPrimerSemestre]="primaPrimerSemestre"
+    [primaSegundoSemestre]="primaSegundoSemestre" [primaPonderada]="primaPonderada"
+    [showPrimaPonderada]="showPrimaPonderada"
+    [diasTotalesTrabajadosPonderado__completo]="diasTotalesTrabajadosPonderado__completo"
+    [isPrimaPonderada]="isPrimaPonderada">
+</app-resultados-calculadora-completo>

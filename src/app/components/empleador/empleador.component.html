@@ -1,0 +1,151 @@
+<div class="p-4">
+    <div>
+        <h1>Empleadores</h1>
+        <div [innerHTML]="formatTextAsHtml(empleador?.generalidades)"></div>
+    </div>
+
+    <div class="accordion accordionZindex" id="accordionExample">
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta1 !== ''">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-light text-dark p-4 bg-light text-dark p-4" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    {{empleador?.pregunta1}}
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta1)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta2 !== ''">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    {{empleador?.pregunta2}}
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta2)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta3 !== ''">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    {{empleador?.pregunta3}}
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta3)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta4 !== ''">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    {{empleador?.pregunta4}}
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta4)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta5 !== ''">
+            <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    {{empleador?.pregunta5}}
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta5)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta6 !== ''">
+            <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                    {{empleador?.pregunta6}}
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta6)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta7 !== ''">
+            <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                    {{empleador?.pregunta7}}
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta7)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta8 !== ''">
+            <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                    {{empleador?.pregunta8}}
+                </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta8)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta9 !== ''">
+            <h2 class=" accordion-header" id="headingNine">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                    {{empleador?.pregunta9}}
+                </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta9)">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" *ngIf="empleador?.pregunta10 !== ''">
+            <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button bg-light text-dark p-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                    {{empleador?.pregunta10}}
+                </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.respuesta10)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

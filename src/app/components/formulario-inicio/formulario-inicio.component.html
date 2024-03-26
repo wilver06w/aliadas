@@ -1,0 +1,34 @@
+<h1 class="fs-4 text-center py-3">Bienvenid@ a nuestra APP Aliadas</h1>
+<p class="text-center">Para comenzar, ¿Qué tipo de usuario eres?</p>
+<div class="">
+    <form [formGroup]="createForm" class="p-3" (ngSubmit)="onSubmit()">
+
+        <div class="form-check">
+            <div class="py-2">
+                <input class="form-check-input" id="empleado" type="radio" value="empleado" formControlName="tipo">
+                <label class="form-check-label" for="empleado">Trabajador/a Doméstico/a</label>
+            </div>
+        </div>
+        <div class="form-check">
+            <div class="py-2">
+                <input class="form-check-input" id="empleador" type="radio" value="empleador" formControlName="tipo">
+                <label class="form-check-label" for="empleador">Empleador/a</label>
+            </div>
+        </div>
+
+        <div class="p-1 py-4">
+            <input [disabled]="!createForm.valid" class="btn mainColor w-100" data-bs-dismiss="modal" type="submit"
+                value="Enviar">
+        </div>
+
+
+
+        <!-- <div class="p-1 py-4">
+            <input [disabled]="!createForm.valid" class="btn mainColor w-100" data-bs-dismiss="modal" type="submit"
+                value="Enviar" (click)="closeModal()">
+        </div> -->
+
+
+
+    </form>
+</div>

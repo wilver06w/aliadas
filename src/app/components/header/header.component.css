@@ -1,0 +1,27 @@
+.subMenuColor {
+    background-color: white;
+}
+
+.iconMenu {
+    color: var(--primary-purple)
+}
+
+.boxHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.toggleColor {
+    background-color: #ea7a15;
+    color: white;
+}
+
+.topLine {
+    max-height: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.137);
+    background-color: var(--primary-purple);
+    margin-top: -20px;
+}

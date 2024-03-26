@@ -1,0 +1,39 @@
+<div>
+    <div class="containerForm titleTipoTrabajo">
+        <h2 class="py-4">Mis Liquidaciones</h2>
+
+        <div class="form p-4">
+            <div class="row py-1">
+                <div class="col-8 text-start fs-6 mt-1 text-secondary">
+                    Fecha Creación
+                </div>
+                <div class="col-4 row text-end">
+                    <div class="col-6"><span class="bi bi-x-circle-fill fs-5 text-secondary"></span></div>
+                    <div class="col-6"><span class="bi bi-check-circle-fill fs-5 text-secondary"></span></div>
+                </div>
+                <hr class="mt-2">
+                <div class="text-secondary p-3" *ngIf="!misLiquidaciones || misLiquidaciones.length === 0">No tienes
+                    liquidaciones creadas</div>
+            </div>
+            <div class="row py-1" *ngFor="let item of misLiquidaciones">
+                <div class="col-8 text-start fs-6 mt-1">
+                    {{item.fecha_creacion | date:'dd-MM-yyyy'}}
+                </div>
+                <div class="col-4 row text-end">
+                    <div class="col-6" [id]="item.id"><span class="bi bi-x-circle-fill fs-5 text-danger"
+                            (click)="deleteLiquidacion($event)"></span>
+                    </div>
+                    <div class="col-6" [id]="item.id"><span class="bi bi-check-circle-fill fs-5 text-success"
+                            (click)="viewLiquidacion($event)"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="my-3">
+                <button class="btn btn-dark w-100" [routerLink]="['/calculadora']"><span class="bi bi-check-lg"></span>
+                    Nueva</button>
+            </div>
+        </div>
+
+    </div>

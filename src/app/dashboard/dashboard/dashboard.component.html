@@ -1,0 +1,69 @@
+<div class="container-fluid">
+        <div class="row">
+                <div class="col-3 bg-dark p-5">
+
+                        <ul class="list-unstyled">
+                                <li class="mb-3"><a class="text-decoration-none text-light"
+                                                [routerLink]="['/dashboard']"><span><i
+                                                                class="bi bi-house-door"></i></span>
+                                                Inicio</a></li>
+
+                                <li class="text-light"><span><i class="bi bi-file-earmark-text"></i></span> Sección
+                                        Principal
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/actualidadlist']">Actualidad</a>
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/violencia/1']">Violencia y
+                                                Acoso</a>
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/libertad/1']">Libertad
+                                                Sindical</a>
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/empleador/1']">Empleador</a>
+                                </li>
+
+                                <li class="text-light mt-3"><span><i class="bi bi-book"></i></span> Mis Derechos</li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/trabajodomestico/1']">Trabajo
+                                                Doméstico</a>
+                                </li>
+                                <li><a class="textSecondary"
+                                                [routerLink]="['/dashboard/contratacion/1']">Contratación</a>
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/jornada/1']">Jornada
+                                                Laboral</a></li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/salario/1']">Salario</a>
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/seguridadsocial/1']">Seguridad
+                                                Social</a></li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/beneficios/1']">Beneficios
+                                                Laborales</a></li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/enfermedades/1']">Enfermedades y
+                                                Accidentes</a></li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/licencias/1']">Licencias y
+                                                Permisos</a></li>
+                                <li class="text-light mt-3"><span><i class="bi bi-people-fill"></i></span> Usuarios
+                                </li>
+                                <li><a class="textSecondary" [routerLink]="['/dashboard/customers']">Ver
+                                                Todos</a>
+                                </li>
+                                <div class="text-center mt-3">
+                                        <p class="text-light cursorPointer" (click)="logout()"><span><i
+                                                                class="bi bi-box-arrow-in-left"></i></span>
+                                                Cerrar Sesión</p>
+                                </div>
+                        </ul>
+
+
+                </div>
+                <div class="col-9 p-0">
+
+                        <div class="p-0">
+
+                                <div class="bg-dark p-3 text-light fs-4">Aliadas APP - Admin</div>
+
+                        </div>
+                        <router-outlet></router-outlet>
+
+                </div>
+        </div>
+</div>

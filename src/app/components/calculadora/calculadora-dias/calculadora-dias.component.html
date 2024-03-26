@@ -1,0 +1,80 @@
+<div *ngIf="showDivForm">
+    <div class="containerForm">
+        <h3 class="titleTipoTrabajo">Trabajo por Días</h3>
+        <h4 class="titleIngresarDatos">Ingresa los siguientes datos:</h4>
+        <form class="p-5 form" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+            <div class="py-2">
+                <small>Fecha Inicial</small>
+                <input class="form-control" type="date" formControlName="fecha_inicio">
+                <p class="text-danger small px-2" *ngIf="checkControl('fecha_inicio', 'required')">Falta Fecha Inicio
+                </p>
+            </div>
+            <div class="py-2">
+                <small>Fecha Final</small>
+                <input class="form-control" type="date" formControlName="fecha_fin">
+                <p class="text-danger small px-2" *ngIf="checkControl('fecha_fin', 'required')">Falta Fecha Inicio
+                </p>
+            </div>
+            <div class="py-2">
+                <small>Auxilio de Transporte (año a liquidar)</small>
+                <select class="form-select" formControlName="auxilio_transporte__dias">
+                    <option value="162000">2024</option>
+                    <option value="140606">2023</option>
+                    <option value="117172">2022</option>
+                    <option value="106454">2021</option>
+                    <option value="102854">2020</option>
+                    <option value="97032">2019</option>
+                    <option value="88211">2018</option>
+                    <option value="83140">2017</option>
+                    <option value="77700">2016</option>
+                    <option value="74000">2015</option>
+                    <option value="72000">2014</option>
+                    <option value="70500">2013</option>
+                    <option value="67800">2012</option>
+                    <option value="63600">2011</option>
+                    <option value="61500">2010</option>
+                    <p class="text-danger small px-2" *ngIf="checkControl('auxilio_transporte__dias', 'required')">
+                        Falta
+                        Auxilio de Transporte
+                    </p>
+                </select>
+            </div>
+            <div class="py-2">
+                <small>Salario por día</small>
+                <input class="form-control" type="number" formControlName="salarioPactado_dia__dias">
+                <p class="text-danger small px-2" *ngIf="checkControl('salarioPactado_dia__dias', 'required')">Falta
+                    Salario Pactado Diario
+                </p>
+            </div>
+
+            <div class="py-2">
+                <small>¿Cuántos días a la semana trabajas?</small>
+                <input class="form-control" type="number" formControlName="diasTrabajadosSemana__dias">
+                <p class="text-danger small px-2" *ngIf="checkControl('diasTrabajadosSemana__dias', 'required')">Falta
+                    Dias de trabajo a la semana
+                </p>
+            </div>
+
+            <div class="py-2">
+                <small>Otros pagos recibidos</small>
+                <input class="form-control" type="number" formControlName="otros_pagos">
+            </div>
+
+            <div>
+                <div class="mt-4">
+                    <input [disabled]="!createForm.valid" class="btn btn-success shadow w-100" type="submit"
+                        value="Calcular">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<app-resultados-calculadora-dias *ngIf="showDivResults" [fecha_inicio]="fecha_inicio" [fecha_fin]="fecha_fin"
+    [diasTotalesTrabajados__dias]="diasTotalesTrabajados__dias" [salarioPactado_dia__dias]="salarioPactado_dia__dias"
+    [promedioSalarioMensual__dias]="promedioSalarioMensual__dias" [auxilio_transporte__dias]="auxilio_transporte__dias"
+    [seguridadSocial__dias]="seguridadSocial__dias" [otros_pagos]="otros_pagos" [cesantias__dias]="cesantias__dias"
+    [interesesCesantias__dias]="interesesCesantias__dias" [vacaciones__dias]="vacaciones__dias"
+    [prima__dias]="prima__dias" [pension__dias]="pension__dias"
+    [diasTrabajadosAnuales__dias]="diasTrabajadosAnuales__dias" [transporteMensual__dias]="transporteMensual__dias"
+    [id]="id">
+</app-resultados-calculadora-dias>
