@@ -110,7 +110,7 @@ export class CalculadoraCompletoComponent {
     this.diasTotalesTrabajadosPonderado__completo = milisegundosMedio / (1000 * 60 * 60 * 24);
 
     const auxilioTransporteMap: any = {
-      2024: 150000,
+      2024: 162000,
       2023: 140606,
       2022: 117172,
       2021: 106454,

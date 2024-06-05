@@ -1,10 +1,68 @@
 <div class="p-4">
     <div>
         <h1>Empleadores</h1>
-        <div [innerHTML]="formatTextAsHtml(empleador?.generalidades)"></div>
     </div>
 
+
+    <div class="d-flex gap-3 justify-content-center">
+        <p>Calcula las prestaciones sociales de tu empleada doméstica incluida la prima de servicios</p>
+
+        <div>
+            <a [routerLink]="['/calculadora/']"><button
+                    class="btn btn-success ">Ir a calculadora</button></a>
+        </div>
+    </div>
+    <div class="d-flex gap-3 justify-content-center">
+        <p> Accede a un modelo de contrato para formalizar la relación laboral con tu empleada doméstica</p>
+
+        <div>
+            <a [routerLink]="['/calculadora/']"><button
+                    class="btn btn-success ">Ir a calculadora</button></a>
+        </div>
+    </div>
+
+    <div class="row pt-4 row_center">
+                <h2> Noticias de interes</h2>
+                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
+                    <a href="https://www.alertabogota.com/noticias/economia-de-bolsillo/definen-monto-que-deben-pagar-de-prima-trabajadores-domesticos" target="_blank">
+                        <img class="w-100" src="../../../assets/noti_emplea-uno.jpg"
+                        alt="Noticia monto pagar">
+                    </a>
+                </div>
+
+
+
+                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
+                        <a href="https://www.infobae.com/colombia/2024/02/24/ministerio-de-trabajo-insistio-en-que-las-trabajadoras-domesticas-deberan-tener-contrato-laboral/" target="_blank">
+                            <img class="w-100" src="../../../assets/noti-emplea-dos.jpg"
+                                alt="Noticia domestica contrato laboral">
+                </a>
+                </div>
+
+                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
+                    <a href="https://www.eltiempo.com/economia/finanzas-personales/cuanto-y-como-se-debe-pagar-a-un-empleado-domestico-en-colombia-en-2024-841172" target="_blank">
+                        <img class="w-100" src="../../../assets/noti-emplea-tres.jpg"
+                            alt="Noticia monto pagar">
+            </a>
+                </div>
+            </div>
+
     <div class="accordion accordionZindex" id="accordionExample">
+
+        <div class="accordion-item" *ngIf="empleador?.generalidades !== ''">
+            <h2 class="accordion-header" id="headingOneOne">
+                <button class="accordion-button bg-light text-dark p-4 bg-light text-dark p-4" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOneOne" aria-expanded="true"
+                    aria-controls="collapseOneOne">
+                    {{"¿Conoces de las condiciones del trabajo doméstico en Colombia?"}}
+                </button>
+            </h2>
+            <div id="collapseOneOne" class="accordion-collapse collapse" aria-labelledby="headingOneOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body" [innerHTML]="formatTextAsHtml(empleador?.generalidades)">
+                </div>
+            </div>
+        </div>
 
         <div class="accordion-item" *ngIf="empleador?.pregunta1 !== ''">
             <h2 class="accordion-header" id="headingOne">
@@ -148,12 +206,6 @@
         </div>
 
 
-        <div>
-            <div class="containerForm">
-                <input class="btn_seconColor shadow" type="button" value="Ir a calculadora"
-                    [routerLink]="['/calculadora/']">
-            </div>
-        </div>
     </div>
 
 </div>

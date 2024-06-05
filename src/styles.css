@@ -45,6 +45,13 @@ p {
     border-radius: 4px;
     display: flex;
 }
+.row_center {
+    margin: 40px auto;
+    border: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 .btn_tertiaryColor {
     background-color: white;
     color: var(--primary-purple);

@@ -5,7 +5,7 @@
             <div class="col-12 col-md-3 pb-5" *ngFor="let item of noticia">
                 <div>
                     <a [routerLink]="['/actualidad/' + item.id]"><img class="w-100 text-decoration-none"
-                            src="../../../assets/noticia-1.jpg" alt="{{item.contenido}}"></a>
+                            src="{{item.imagen}}" alt="{{item.contenido}}"></a>
                 </div>
                 <a [routerLink]="['/actualidad/' + item.id]" class="text-decoration-none">
                     <h2>{{item.titulo}}</h2>
