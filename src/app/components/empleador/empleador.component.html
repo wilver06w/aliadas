@@ -2,44 +2,41 @@
     <div>
         <h1>Empleadores</h1>
     </div>
+    <div class="row pt-4 row_center_without_spacing">
+        <h6 class="center">Calcula las prestaciones sociales de tu empleada doméstica y formaliza la relación laboral a través del contrato de trabajo.</h6>
+            <h6 class="center">Accede aquí:</h6>
 
-
-    <div class="d-flex gap-3 justify-content-center">
-        <p>Calcula las prestaciones sociales de tu empleada doméstica incluida la prima de servicios</p>
-
-        <div>
-            <a [routerLink]="['/calculadora/']"><button
-                    class="btn btn-success ">Ir a calculadora</button></a>
-        </div>
-    </div>
-    <div class="d-flex gap-3 justify-content-center">
-        <p> Accede a un modelo de contrato para formalizar la relación laboral con tu empleada doméstica</p>
-
-        <div>
-            <a [routerLink]="['/calculadora/']"><button
-                    class="btn btn-success ">Ir a calculadora</button></a>
-        </div>
+    <div class="py-3 row_center_without_spacing" >
+    <div class="col-6 px-4 col-md-2">
+        <a [routerLink]="['/calculadora/']">
+        <img class="w-100" src="../../../assets/bt-calculadoras_morada.png" alt="Ver Calculadora">
+        </a>
     </div>
 
-    <div class="row pt-4 row_center">
+    <div class="col-6 px-4 col-md-2">
+        <a [routerLink]="['/contratacion/1']">
+        <img class="w-100" src="../../../assets/bt-contratacion_morada.png" alt="Ver Contratación">
+    </a>
+    </div>
+    </div>
+    </div>
+
+    <div class="row pt-4 row_center_without_spacing">
                 <h2> Noticias de interes</h2>
-                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
-                    <a href="https://www.alertabogota.com/noticias/economia-de-bolsillo/definen-monto-que-deben-pagar-de-prima-trabajadores-domesticos" target="_blank">
-                        <img class="w-100" src="../../../assets/noti_emplea-uno.jpg"
-                        alt="Noticia monto pagar">
-                    </a>
+                <div class="col-6 col-md-4 px-4 py-1 p-md-5">
+                        <a href="https://www.alertabogota.com/noticias/economia-de-bolsillo/definen-monto-que-deben-pagar-de-prima-trabajadores-domesticos" target="_blank">
+                            <img class="w-100" src="../../../assets/noti_empleadores1.jpg"
+                                alt="Noticia monto pagar">
+                </a>
                 </div>
-
-
-
-                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
+                <div class="col-6 col-md-4 px-4 py-1 p-md-5">
                         <a href="https://www.infobae.com/colombia/2024/02/24/ministerio-de-trabajo-insistio-en-que-las-trabajadoras-domesticas-deberan-tener-contrato-laboral/" target="_blank">
                             <img class="w-100" src="../../../assets/noti-emplea-dos.jpg"
                                 alt="Noticia domestica contrato laboral">
                 </a>
                 </div>
 
-                <div class="col-6 col-md-3 px-4 py-1 p-md-5">
+                <div class="col-6 col-md-4 px-4 py-1 p-md-5">
                     <a href="https://www.eltiempo.com/economia/finanzas-personales/cuanto-y-como-se-debe-pagar-a-un-empleado-domestico-en-colombia-en-2024-841172" target="_blank">
                         <img class="w-100" src="../../../assets/noti-emplea-tres.jpg"
                             alt="Noticia monto pagar">
