@@ -15,7 +15,7 @@ export class GuiaEntidadesComponent {
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    const urlToEmbed = 'https://aliadas.co/guia-de-entidades-app/';
+    const urlToEmbed = 'https://2.aliadas.co/guia-de-entidades-app/';
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(urlToEmbed);
   }
 }
