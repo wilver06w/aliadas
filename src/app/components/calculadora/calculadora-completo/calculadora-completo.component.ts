@@ -203,12 +203,12 @@ export class CalculadoraCompletoComponent {
     this.salarioMenosDeducciones__completo = this.salario_mensual__completo - (this.seguridadSocial__completo + this.pensiones__completo);
     this.salarioHora__completo = this.salario_mensual__completo - (this.seguridadSocial__completo + this.pensiones__completo)
     this.baseSalarialLiquidacion__completo = this.auxilio_transporte__completo + this.salario_mensual__completo + this.otros_pagos__completo;
-    this.cesantias__completo = cesantiasF(this.baseSalarialLiquidacion__completo, this.diasTotalesTrabajados__completo);
+    this.cesantias__completo = cesantiasF(this.salario_mensual__completo, this.diasTotalesTrabajados__completo);
 
     this.interesesCesantias__completo = (this.cesantias__completo * this.diasTotalesTrabajados__completo * 0.12) / 360;
 
     if (this.isPrimaPonderada === 'no') {
-      this.primaPonderada = this.baseSalarialLiquidacion__completo * this.diasTotalesTrabajadosPonderado__completo / 360;
+      this.primaPonderada = this.salario_mensual__completo * this.diasTotalesTrabajadosPonderado__completo / 360;
     } else if (this.isPrimaPonderada === 'si') {
       this.prima__completo = this.baseSalarialLiquidacion__completo * this.diasTotalesTrabajados__completo / 360;
     } else {
