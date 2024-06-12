@@ -23,7 +23,7 @@
     "@capacitor/android": "^5.1.1",
     "@capacitor/angular": "^2.0.3",
     "@capacitor/app": "^5.0.5",
-    "@capacitor/core": "latest",
+    "@capacitor/core": "^6.1.0",
     "@capacitor/filesystem": "^5.1.2",
     "@ng-bootstrap/ng-bootstrap": "^14.2.0",
     "@popperjs/core": "^2.11.6",
