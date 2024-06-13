@@ -25,6 +25,7 @@
     "@capacitor/app": "^5.0.5",
     "@capacitor/core": "^6.1.0",
     "@capacitor/filesystem": "^5.1.2",
+    "@capacitor/ios": "^6.1.0",
     "@ng-bootstrap/ng-bootstrap": "^14.2.0",
     "@popperjs/core": "^2.11.6",
     "@tinymce/tinymce-angular": "^7.0.0",
