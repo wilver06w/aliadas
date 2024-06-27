@@ -202,7 +202,7 @@ export class CalculadoraCompletoComponent {
     this.pensiones__completo = this.salario_mensual__completo * 0.04;
     this.salarioMenosDeducciones__completo = this.salario_mensual__completo - (this.seguridadSocial__completo + this.pensiones__completo);
     this.salarioHora__completo = this.salario_mensual__completo - (this.seguridadSocial__completo + this.pensiones__completo)
-    this.baseSalarialLiquidacion__completo = this.auxilio_transporte__completo + this.salario_mensual__completo + this.otros_pagos__completo;
+    this.baseSalarialLiquidacion__completo = this.salario_mensual__completo;
     this.cesantias__completo = cesantiasF(this.salario_mensual__completo, this.diasTotalesTrabajados__completo);
 
     this.interesesCesantias__completo = (this.cesantias__completo * this.diasTotalesTrabajados__completo * 0.12) / 360;
