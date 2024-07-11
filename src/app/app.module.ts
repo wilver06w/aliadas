@@ -64,6 +64,7 @@ import { MiLiquidacionHorasComponent } from './components/calculadora/mi-liquida
 import { MiLiquidacionDiasComponent } from './components/calculadora/mi-liquidacion-dias/mi-liquidacion-dias.component';
 import { LoginComponent } from './components/login/login.component';
 import { CustomersComponent } from './dashboard/customers/customers.component';
+import { Facebook } from '@ionic-native/facebook/ngx';
 
 @NgModule({
   declarations: [
@@ -133,7 +134,7 @@ import { CustomersComponent } from './dashboard/customers/customers.component';
     HttpClientModule,
     EditorModule,
   ],
-  providers: [ActualidadService],
+  providers: [ActualidadService, Facebook],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
